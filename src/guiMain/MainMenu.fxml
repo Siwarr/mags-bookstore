@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guiMain.FXMLController">
+   <children>
+      <AnchorPane prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #22a5a8;">
+         <children>
+            <Button fx:id="bars" layoutX="11.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#openPanel" style="-fx-background-color: transparent;">
+               <graphic>
+                  <FontAwesomeIconView glyphName="BARS" size="15" />
+               </graphic></Button>
+            <Button fx:id="chevronleft" layoutX="12.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#closePanel" style="-fx-background-color: transparent;">
+               <graphic>
+                  <FontAwesomeIconView glyphName="CHEVRON_LEFT" size="15" />
+               </graphic></Button>
+            <Button layoutX="142.0" layoutY="6.0" mnemonicParsing="false" styleClass="min_close_btn" stylesheets="@style.css">
+               <graphic>
+                  <FontAwesomeIconView fx:id="bt_signout" glyphName="SIGN_OUT" onMouseClicked="#signOut" size="20" />
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="200.0" prefHeight="40.0" prefWidth="824.0" style="-fx-background-color: #d5eaeb;">
+         <children>
+            <Button fx:id="bt_reclamation" layoutX="482.0" layoutY="6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#ongletReclamation" prefHeight="26.0" prefWidth="104.0" style="-fx-background-color: transparent;" styleClass="menubar" stylesheets="@style.css" text="Reclaim">
+               <graphic>
+                  <FontAwesomeIconView glyphName="ENVELOPE_ALT" size="15" />
+               </graphic>
+               <font>
+                  <Font name="Arial Italic" size="14.0" />
+               </font></Button>
+            <Button fx:id="bt_close" layoutX="794.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#close" styleClass="min_close_btn" stylesheets="@style.css">
+               <graphic>
+                  <FontAwesomeIconView fill="#22a5a8" glyphName="CLOSE" size="20" />
+               </graphic>
+               <font>
+                  <Font size="6.0" />
+               </font>
+            </Button>
+            <Button fx:id="bt_minimize" layoutX="763.0" layoutY="6.0" mnemonicParsing="false" onMouseClicked="#minimize" styleClass="min_close_btn" stylesheets="@style.css">
+               <graphic>
+                  <FontAwesomeIconView fill="#22a5a8" glyphName="MINUS" size="20" text="" />
+               </graphic>
+               <font>
+                  <Font size="6.0" />
+               </font>
+            </Button>
+            <Button layoutX="76.0" layoutY="6.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="26.0" prefWidth="104.0" style="-fx-background-color: transparent;" styleClass="menubar" stylesheets="@style.css" text="Button">
+               <graphic>
+                  <FontAwesomeIconView />
+               </graphic>
+            </Button>
+            <Button layoutX="201.0" layoutY="6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="26.0" prefWidth="104.0" style="-fx-background-color: transparent;" styleClass="menubar" stylesheets="@style.css" text="Button">
+               <graphic>
+                  <FontAwesomeIconView />
+               </graphic>
+            </Button>
+            <Button layoutX="328.0" layoutY="6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="26.0" prefWidth="104.0" style="-fx-background-color: transparent;" styleClass="menubar" stylesheets="@style.css" text="Button">
+               <graphic>
+                  <FontAwesomeIconView />
+               </graphic>
+            </Button>
+            <Button fx:id="bt_reclamationAdmin" layoutX="482.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#ongletReclamationAdmin" prefHeight="26.0" prefWidth="104.0" style="-fx-background-color: transparent;" styleClass="menubar" stylesheets="@style.css" text="Reclaim">
+               <graphic>
+                  <FontAwesomeIconView glyphName="ENVELOPE_ALT" size="15" />
+               </graphic>
+               <font>
+                  <Font name="Arial Italic" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="bt_home" layoutX="14.0" layoutY="6.0" mnemonicParsing="false" onMouseClicked="#goToHome" prefHeight="26.0" prefWidth="10.0" style="-fx-background-color: transparent;" styleClass="menubar" stylesheets="@style.css">
+               <graphic>
+                  <FontAwesomeIconView glyphName="HOME" size="16" />
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="40.0" prefHeight="660.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to left bottom, #32b5b8, #2aafce, #55a5da, #8398d7, #a98ac6);;">
+         <children>
+            <Button layoutX="-1.5" layoutY="218.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="126.0" style="-fx-background-color: transparent;" styleClass="sidebarItem" stylesheets="@style.css" text="Button1">
+               <graphic>
+                  <FontAwesomeIconView size="15" translateX="-20.0" />
+               </graphic></Button>
+            <Button layoutX="-1.5" layoutY="275.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="126.0" style="-fx-background-color: transparent;" styleClass="sidebarItem" stylesheets="@style.css" text="Button2">
+               <graphic>
+                  <FontAwesomeIconView size="15" translateX="-20.0" />
+               </graphic></Button>
+            <Button layoutX="-1.5" layoutY="337.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="126.0" style="-fx-background-color: transparent;" styleClass="sidebarItem" stylesheets="@style.css" text="Button3">
+               <graphic>
+                  <FontAwesomeIconView size="15" translateX="-20.0" />
+               </graphic></Button>
+            <Button layoutX="-1.5" layoutY="390.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="126.0" style="-fx-background-color: transparent;" styleClass="sidebarItem" stylesheets="@style.css" text="Button4">
+               <graphic>
+                  <FontAwesomeIconView size="15" translateX="-20.0" />
+               </graphic></Button>
+            <Button layoutX="-1.5" layoutY="445.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="126.0" style="-fx-background-color: transparent;" styleClass="sidebarItem" stylesheets="@style.css" text="Button5">
+               <graphic>
+                  <FontAwesomeIconView size="15" translateX="-20.0" />
+               </graphic></Button>
+            <AnchorPane fx:id="panelSide" layoutX="36.0" prefHeight="660.0" prefWidth="164.0" style="-fx-background-color: #82CDCD;" visible="false">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="200.0" layoutY="40.0" prefHeight="660.0" prefWidth="824.0">
+         <children>
+            <AnchorPane fx:id="content" prefHeight="660.0" prefWidth="824.0" style="-fx-background-color: #82CDCD;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
