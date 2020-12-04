@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Jendli/Documents/etudes/1ALINFO/ExNetbeans/BookStore_V1/src/guiReclamation/FXMLController.java</file>
+            <file>file:/C:/Users/Jendli/Documents/etudes/1ALINFO/ExNetbeans/BookStore_V1/src/entities/Admin.java</file>
+            <file>file:/C:/Users/Jendli/Documents/etudes/1ALINFO/ExNetbeans/BookStore_V1/src/service/ServiceLogin_Register.java</file>
+            <file>file:/C:/Users/Jendli/Documents/etudes/1ALINFO/ExNetbeans/BookStore_V1/src/service/AdminAuthentifie.java</file>
+            <file>file:/C:/Users/Jendli/Documents/etudes/1ALINFO/ExNetbeans/BookStore_V1/src/guiReclamation/Reclamation.fxml</file>
+            <file>file:/C:/Users/Jendli/Documents/etudes/1ALINFO/ExNetbeans/BookStore_V1/src/service/ClientAuthentifie.java</file>
+            <file>file:/C:/Users/Jendli/Documents/etudes/1ALINFO/ExNetbeans/BookStore_V1/src/guiRegister/RegisterController.java</file>
+            <file>file:/C:/Users/Jendli/Documents/etudes/1ALINFO/ExNetbeans/BookStore_V1/src/entities/Reclamation.java</file>
+            <file>file:/C:/Users/Jendli/Documents/etudes/1ALINFO/ExNetbeans/BookStore_V1/src/bookstore_v1/BookStore_V1.java</file>
+            <file>file:/C:/Users/Jendli/Documents/etudes/1ALINFO/ExNetbeans/BookStore_V1/src/bookstore_v1/styleLogin_Register.css</file>
+            <file>file:/C:/Users/Jendli/Documents/etudes/1ALINFO/ExNetbeans/BookStore_V1/src/guiReclamation/Admin_Reclamation.fxml</file>
+            <file>file:/C:/Users/Jendli/Documents/etudes/1ALINFO/ExNetbeans/BookStore_V1/src/guiReclamation/styleReclamation.css</file>
+            <file>file:/C:/Users/Jendli/Documents/etudes/1ALINFO/ExNetbeans/BookStore_V1/src/guiReclamation/SendMail_ReclamationController.java</file>
+            <file>file:/C:/Users/Jendli/Documents/etudes/1ALINFO/ExNetbeans/BookStore_V1/src/technique/MyConnection.java</file>
+            <file>file:/C:/Users/Jendli/Documents/etudes/1ALINFO/ExNetbeans/BookStore_V1/src/controller/InterfaceReclamation.java</file>
+            <file>file:/C:/Users/Jendli/Documents/etudes/1ALINFO/ExNetbeans/BookStore_V1/src/service/ServiceReclamation.java</file>
+            <file>file:/C:/Users/Jendli/Documents/etudes/1ALINFO/ExNetbeans/BookStore_V1/src/guiReclamation/NewReclamation.fxml</file>
+            <file>file:/C:/Users/Jendli/Documents/etudes/1ALINFO/ExNetbeans/BookStore_V1/src/guiReclamation/Admin_ReclamationController.java</file>
+            <file>file:/C:/Users/Jendli/Documents/etudes/1ALINFO/ExNetbeans/BookStore_V1/src/controller/InterfaceLogin_Register.java</file>
+            <file>file:/C:/Users/Jendli/Documents/etudes/1ALINFO/ExNetbeans/BookStore_V1/src/guiReclamation/NewReclamationController.java</file>
+            <file>file:/C:/Users/Jendli/Documents/etudes/1ALINFO/ExNetbeans/BookStore_V1/src/bookstore_v1/FXMLDocumentController.java</file>
+            <file>file:/C:/Users/Jendli/Documents/etudes/1ALINFO/ExNetbeans/BookStore_V1/src/entities/Client.java</file>
+            <file>file:/C:/Users/Jendli/Documents/etudes/1ALINFO/ExNetbeans/BookStore_V1/src/guiReclamation/SendMail_Reclamation.fxml</file>
+            <file>file:/C:/Users/Jendli/Documents/etudes/1ALINFO/ExNetbeans/BookStore_V1/src/guiMain/FXMLController.java</file>
+        </group>
+    </open-files>
+</project-private>
