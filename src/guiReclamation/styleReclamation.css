@@ -1,0 +1,44 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 1 déc. 2020, 15:39:10
+    Author     : Jendli
+*/
+
+.table-view{
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header {
+       -fx-background-color:#A6F2F2;
+}
+
+.button{
+    -fx-background-color: #22a5a8;
+     -fx-text-fill:  White;
+     -fx-background-radius: 22;
+}
+
+.button:hover{
+    -fx-background-radius: 22;
+    -fx-background-color: WHITE;
+    -fx-border-color: #22a5a8;
+    -fx-text-fill:  #22a5a8;
+    -fx-border-radius: 20;
+    
+}
+.button:pressed{
+     
+     -fx-border-width: 3px;
+     -fx-background-radius: 22;
+    
+}
+
+.text_field{
+    -fx-border-color: #22a5a8;
+    -fx-border-radius: 20;
+    -fx-background-insets: 0, 0 0 1 0 ;
+}
