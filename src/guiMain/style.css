@@ -1,0 +1,32 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 1 déc. 2020, 11:21:56
+    Author     : Jendli
+*/
+
+.min_close_btn{
+    -fx-background-color: transparent;
+}
+
+.min_close_btn:hover{
+    -fx-border-color: #82CDCD;
+     -fx-border-width: 2px 2px 2px 2px;
+     
+}
+
+.menubar:hover{
+    -fx-border-color:  #82CDCD;
+    -fx-border-width: 0px 0px 4px 0px;
+}
+
+.sidebarItem:hover{
+    -fx-background-color:  #22a5a8;
+    -fx-border-color:   #d5eaeb;
+    -fx-border-width: 0px 0px 0px 4px;
+    
+}
+
