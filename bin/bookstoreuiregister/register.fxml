@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="registerParent" prefHeight="700.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstoreuiregister/RegisterController">
+   <children>
+      <TextField fx:id="username" layoutX="167.0" layoutY="234.0" prefHeight="27.0" prefWidth="235.0" promptText="UserName" style="-fx-background-color: transparent; -fx-border-color: #22a5a8; -fx-border-width: 0px 0px 2px 0px;" />
+      <TextField fx:id="mail" layoutX="170.0" layoutY="369.0" prefHeight="27.0" prefWidth="235.0" promptText="Mail" style="-fx-background-color: transparent; -fx-border-color: #22a5a8; -fx-border-width: 0px 0px 2px 0px;" />
+      <PasswordField fx:id="pwd" layoutX="171.0" layoutY="440.0" prefHeight="27.0" prefWidth="237.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #22a5a8; -fx-border-width: 0px 0px 2px 0px;" />
+      <FontAwesomeIconView fill="#22a5a8" glyphName="USER" layoutX="131.0" layoutY="258.0" size="30" />
+      <FontAwesomeIconView fill="#22a5a8" glyphName="KEY" layoutX="133.0" layoutY="464.0" size="30" />
+      <Button fx:id="register" layoutX="196.0" layoutY="528.0" mnemonicParsing="false" onMouseClicked="#register" prefHeight="37.0" prefWidth="140.0" stylesheets="@../bookstore_v1/styleLogin_Register.css" text="Register" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="arrow_back" layoutX="22.0" layoutY="23.0" mnemonicParsing="false" onMouseClicked="#backLogin" prefHeight="41.0" prefWidth="55.0" styleClass="back_btn" stylesheets="@../bookstore_v1/styleLogin_Register.css">
+         <graphic>
+            <FontAwesomeIconView fill="#22a5a8" glyphName="ARROW_LEFT" size="25" wrappingWidth="17.857142448425293" />
+         </graphic>
+         <font>
+            <Font size="6.0" />
+         </font>
+      </Button>
+      <Label layoutX="170.0" layoutY="151.0" prefHeight="32.0" prefWidth="193.0" text="Registration Form" textFill="#22a5a8">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <FontAwesomeIconView fill="#22a5a8" glyphName="BOOK" layoutX="234.0" layoutY="124.0" size="70" />
+      <FontAwesomeIconView fill="#22a5a8" glyphName="ENVELOPE" layoutX="133.0" layoutY="393.0" size="25" />
+      <TextField fx:id="txt_lastname" layoutX="167.0" layoutY="310.0" prefHeight="25.0" prefWidth="235.0" promptText="LastName" style="-fx-background-color: transparent; -fx-border-color: #22a5a8; -fx-border-width: 0px 0px 2px 0px;" />
+      <FontAwesomeIconView fill="#22a5a8" glyphName="FILE_TEXT_ALT" layoutX="128.0" layoutY="334.0" size="30" />
+   </children>
+</AnchorPane>

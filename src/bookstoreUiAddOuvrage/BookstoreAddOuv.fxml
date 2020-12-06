@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="rootPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstoreUiAddOuvrage.BookstoreAddController">
+	<center>
+		<Pane prefHeight="650.0" prefWidth="535.0" BorderPane.alignment="CENTER">
+			<children>
+				<VBox layoutY="2.0" prefHeight="651.0" prefWidth="535.0">
+					<children>
+						<TextField fx:id="title" prefHeight="48.0" prefWidth="515.0" promptText="Book Title">
+							<VBox.margin>
+								<Insets left="10.0" right="10.0" top="20.0" />
+							</VBox.margin>
+							<font>
+								<Font size="19.0" />
+							</font>
+						</TextField>
+						<TextField fx:id="author" layoutX="10.0" layoutY="78.0" prefHeight="48.0" prefWidth="515.0" promptText="Book Author">
+							<font>
+								<Font size="19.0" />
+							</font>
+							<VBox.margin>
+								<Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+							</VBox.margin>
+						</TextField>
+						<TextField fx:id="edition" layoutX="10.0" layoutY="126.0" prefHeight="48.0" prefWidth="515.0" promptText="Book Edition">
+							<font>
+								<Font size="19.0" />
+							</font>
+							<VBox.margin>
+								<Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+							</VBox.margin>
+						</TextField>
+						<TextField fx:id="price" layoutX="10.0" layoutY="174.0" prefHeight="48.0" prefWidth="515.0" promptText="Book price">
+							<font>
+								<Font size="19.0" />
+							</font>
+							<VBox.margin>
+								<Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+							</VBox.margin>
+						</TextField>
+						<TextField fx:id="description" layoutX="20.0" layoutY="254.0" prefHeight="48.0" prefWidth="515.0" promptText="Book Description">
+							<font>
+								<Font size="19.0" />
+							</font>
+							<VBox.margin>
+								<Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+							</VBox.margin>
+						</TextField>
+						<TextField fx:id="quantite" layoutX="20.0" layoutY="332.0" prefHeight="48.0" prefWidth="515.0" promptText="Book quantite">
+							<font>
+								<Font size="19.0" />
+							</font>
+							<VBox.margin>
+								<Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+							</VBox.margin>
+						</TextField>
+					</children>
+				</VBox>
+				<Button fx:id="save" layoutX="16.0" layoutY="522.0" mnemonicParsing="false" onAction="#addBook" prefHeight="48.0" prefWidth="250.0" stylesheets="@addBook.css" text="Save" />
+				<Button fx:id="cancel" layoutX="270.0" layoutY="523.0" mnemonicParsing="false" onAction="#cancel" prefHeight="47.0" prefWidth="250.0" stylesheets="@addBook.css" text="Cancel" />
+			</children>
+		</Pane>
+	</center>
+</BorderPane>

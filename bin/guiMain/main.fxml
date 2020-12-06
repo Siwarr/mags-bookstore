@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="473.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <left>
+            <VBox prefHeight="444.0" prefWidth="149.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#loadAddOuvrage" prefHeight="116.0" prefWidth="150.0" text="Ajouter Ouvrage">
+                     <graphic>
+                        <ImageView fitHeight="46.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/Play_Books_30007.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#loadAddMember" prefHeight="116.0" prefWidth="150.0" text="Ajouter membre">
+                     <graphic>
+                        <ImageView fitHeight="46.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/user_account_person_avatar_icon_131248.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button contentDisplay="TOP" layoutX="10.0" layoutY="79.0" mnemonicParsing="false" onAction="#loadOuvrageTable" prefHeight="118.0" prefWidth="150.0" text="Voir Ouvrage">
+                     <graphic>
+                        <ImageView fitHeight="46.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/voir.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button contentDisplay="TOP" layoutX="10.0" layoutY="148.0" mnemonicParsing="false" onAction="#loadMemberTable" prefHeight="116.0" prefWidth="150.0" text="Voir membres">
+                     <graphic>
+                        <ImageView fitHeight="46.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/gnomebooks_104348.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab text="Emprunter ouvrage">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="411.0" prefWidth="451.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="158.0" prefWidth="451.0">
+                                       <children>
+                                          <TextField text="entrer id ouvrage">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <VBox alignment="CENTER" prefHeight="145.0" prefWidth="205.0">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+                                             </HBox.margin>
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nom Ouvrage">
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </Text>
+                                                <Text layoutX="66.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Autheur" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="158.0" prefWidth="451.0">
+                                       <children>
+                                          <TextField text="entrer id client">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <VBox alignment="CENTER" prefHeight="145.0" prefWidth="205.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nom client">
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </Text>
+                                                <Text layoutX="66.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" styleClass="setup-button" stylesheets="@style.css" text="Enprunter" textFill="#30178c">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Renouvellement / Submission">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane layoutX="103.0" layoutY="14.0" prefHeight="411.0" prefWidth="451.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <top>
+                                    <TextField prefHeight="47.0" prefWidth="357.0" promptText="Entrer ouvrage id" BorderPane.alignment="CENTER">
+                                       <BorderPane.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </BorderPane.margin>
+                                    </TextField>
+                                 </top>
+                                 <center>
+                                    <ListView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                       <BorderPane.margin>
+                                          <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                       </BorderPane.margin>
+                                    </ListView>
+                                 </center>
+                                 <bottom>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Button mnemonicParsing="false" styleClass="setup-button" stylesheets="@style.css" text="Renouvellement" textFill="#4321cc">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Button layoutX="173.0" layoutY="48.0" mnemonicParsing="false" styleClass="setup-button" stylesheets="@style.css" text="Submission" textFill="#30178c">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </bottom>
+                              </BorderPane>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

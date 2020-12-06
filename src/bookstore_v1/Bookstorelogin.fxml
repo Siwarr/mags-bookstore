@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstore_v1.BookstoreloginController">
+	<children>
+      <BorderPane fx:id="parent" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1024.0">
+         <center>
+            <Pane fx:id="content" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1024.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="700.0" prefWidth="524.0" style="-fx-background-color: linear-gradient(to left bottom, #32b5b8, #2aafce, #55a5da, #8398d7, #a98ac6);">
+                     <children>
+                        <Label layoutX="140.0" layoutY="394.0" text="Mag's BookStore" textFill="WHITE">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="loginParent" layoutX="524.0" prefHeight="700.0" prefWidth="500.0">
+                     <children>
+                        <TextField fx:id="username" layoutX="167.0" layoutY="299.0" prefHeight="27.0" prefWidth="235.0" promptText="UserName" style="-fx-background-color: transparent; -fx-border-color: #22a5a8; -fx-border-width: 0px 0px 2px 0px;">
+                           <font>
+                              <Font name="Arial Italic" size="16.0" />
+                           </font></TextField>
+                        <PasswordField fx:id="pwd" layoutX="169.0" layoutY="391.0" prefHeight="27.0" prefWidth="237.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #22a5a8; -fx-border-width: 0px 0px 2px 0px;">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                         </PasswordField>
+                        <Button fx:id="login" layoutX="196.0" layoutY="470.0" mnemonicParsing="false" onMouseClicked="#connecter" prefHeight="37.0" prefWidth="140.0" text="Login" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Hyperlink fx:id="register" layoutX="229.0" layoutY="563.0" onMouseClicked="#openRegister" text="Register">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Hyperlink>
+                        <Label layoutX="215.0" layoutY="232.0" text="User Login" textFill="#22a5a8">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="bt_close" layoutX="465.0" layoutY="4.0" mnemonicParsing="false" onMouseClicked="#close" styleClass="close_min_btn">
+                           <font>
+                              <Font size="6.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="bt_minimize" layoutX="443.0" layoutY="4.0" mnemonicParsing="false" onMouseClicked="#minimize" styleClass="close_min_btn">
+                          
+                           <font>
+                              <Font size="4.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
+

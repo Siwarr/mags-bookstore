@@ -1,0 +1,32 @@
+.mainFsmlClass{}
+
+.setup-button{
+	-fx-background-color:#30178c;
+	-fx-text-fill: white;
+}
+.setup-button:hover{
+	-fx-background-color:#4321cc;
+	-fx-text-fill:#FFFFFF;
+}
+
+.min_close_btn{
+    -fx-background-color: transparent;
+}
+
+.min_close_btn:hover{
+    -fx-border-color: #82CDCD;
+     -fx-border-width: 2px 2px 2px 2px;
+     
+}
+
+.menubar:hover{
+    -fx-border-color:  #82CDCD;
+    -fx-border-width: 0px 0px 4px 0px;
+}
+
+.sidebarItem:hover{
+    -fx-background-color:  #22a5a8;
+    -fx-border-color:   #d5eaeb;
+    -fx-border-width: 0px 0px 0px 4px;
+    
+}
