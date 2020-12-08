@@ -78,6 +78,11 @@
                   <FontAwesomeIconView glyphName="HOME" size="16" />
                </graphic>
             </Button>
+            <Button layoutX="685.0" layoutY="5.0" mnemonicParsing="false" styleClass="min_close_btn" stylesheets="@style.css">
+               <graphic>
+                  <FontAwesomeIconView fx:id="bt_microphone" glyphName="MICROPHONE" onMouseClicked="#openVoiceControl" size="18" />
+               </graphic>
+            </Button>
          </children>
       </AnchorPane>
       <AnchorPane layoutY="40.0" prefHeight="660.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to left bottom, #32b5b8, #2aafce, #55a5da, #8398d7, #a98ac6);;">
