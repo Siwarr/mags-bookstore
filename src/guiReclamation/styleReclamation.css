@@ -42,3 +42,15 @@ and open the template in the editor.
     -fx-border-radius: 20;
     -fx-background-insets: 0, 0 0 1 0 ;
 }
+
+.data0.chart-pie{
+    -fx-pie-color:-fx-secondary; 
+}
+
+.data1.chart-pie{
+    -fx-pie-color:-fx-blue; 
+}
+
+.chart-pie-label{
+    -fx-fill: -fx-secondary;
+}
