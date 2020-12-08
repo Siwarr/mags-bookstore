@@ -1,0 +1,13 @@
+#JSGF V1.0;
+
+/**
+ * JSGF Grammar 
+ */
+
+grammar grammar;
+
+public <Reclamation>  = (reclaim | reclamation);
+public <command>  = (add reclaim| new reclaim );
+public <account>  = (account);
+public <home>  = (home);
+public <stop>  = (stop);

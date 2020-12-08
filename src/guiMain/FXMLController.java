@@ -16,21 +16,26 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.animation.TranslateTransition;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 import service.AdminAuthentifie;
 import service.ClientAuthentifie;
 import tray.animations.AnimationType;
 import tray.notification.NotificationType;
 import tray.notification.TrayNotification;
+
 
 
 /**
@@ -60,8 +65,10 @@ public class FXMLController implements Initializable {
     private FontAwesomeIconView bt_signout;
     @FXML
     private Button bt_home;
+    @FXML
+    private FontAwesomeIconView bt_microphone;
     
-
+   
     /**
      * Initializes the controller class.
      */
@@ -69,6 +76,7 @@ public class FXMLController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         try {
+             //new SpeechRecognizer(content);
             // TODO
             Parent home=FXMLLoader.load(getClass().getResource("/guiHome/Home.fxml"));
             content.getChildren().removeAll();
@@ -82,10 +90,12 @@ public class FXMLController implements Initializable {
             if(client==null)
             {
                 bt_reclamation.setVisible(false);
+                bt_microphone.setVisible(false);
             }
             if(admin==null)
             {
                 bt_reclamationAdmin.setVisible(false);
+                
             }
         } catch (IOException ex) {
             Logger.getLogger(FXMLController.class.getName()).log(Level.SEVERE, null, ex);
@@ -195,5 +205,15 @@ public class FXMLController implements Initializable {
            content.getChildren().removeAll();
            content.getChildren().setAll(home);
     }
+
+    @FXML
+    private void openVoiceControl(MouseEvent event) throws IOException {
+        Parent voiceControl=FXMLLoader.load(getClass().getResource("/voiceControl/VoiceControl.fxml"));
+        Stage stage=new Stage();
+        stage.setTitle("Voice Control");
+        stage.setScene(new Scene(voiceControl));
+        stage.show();
+    }
+
     
 }

@@ -21,6 +21,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.chart.PieChart;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
@@ -35,6 +36,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.util.Callback;
 import javafx.util.Duration;
@@ -72,7 +74,8 @@ public class Admin_ReclamationController implements Initializable {
     private AnchorPane content;
     @FXML
     private TextField txt_search;
-   
+    @FXML
+    private Button bt_stat;
     
     
     
@@ -235,6 +238,15 @@ public class Admin_ReclamationController implements Initializable {
     }
     
         
+        
+
+    @FXML
+    private void openStat(MouseEvent event) throws IOException {
+        FXMLLoader loader =new FXMLLoader(getClass().getResource("/guiReclamation/ReclamationStat.fxml"));
+        Parent mailReclamation=loader.load();
+        content.getChildren().removeAll();
+        content.getChildren().setAll(mailReclamation);
+    }
     
     
 }
