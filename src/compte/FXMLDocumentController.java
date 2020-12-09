@@ -72,10 +72,10 @@ public class FXMLDocumentController implements Initializable {
 Date date = new Date(System.currentTimeMillis());
 String dt = formatter.format(date);
 
-      ObservableList<Client> list = FXCollections.observableArrayList(new Client("ghaith","prenom", "ville", 8100 , 99676342 , dt, "07992678", "decihi9641@sdysofa.com")
+      ObservableList<Client> list = FXCollections.observableArrayList(new Client("ghaith","khiari", "ville", 8100 , 99676342 , dt, "07992678", "gkhiari6@gmail.com","555")
              
     );
-      Client c1 =new Client("ghaith","prenom", "ville", 8100 , 99676342 , dt, "07992678", "decihi9641@sdysofa.com","555");
+      Client c1 =new Client("ghaith","khiari", "ville", 8100 , 99676342 , dt, "07992678", "gkhiari6@gmail.com","555");
     @FXML
     private TableColumn<Client, String> cin;
     
@@ -108,7 +108,7 @@ String dt = formatter.format(date);
            mail.setCellValueFactory(new PropertyValueFactory<>("email"));
             num.setCellValueFactory(new PropertyValueFactory<>("num_de_telf"));
              ville.setCellValueFactory(new PropertyValueFactory<>("ville"));
-             datee.setCellValueFactory(new PropertyValueFactory<>(" date_inscri"));
+             datee.setCellValueFactory(new PropertyValueFactory<>("date_inscri"));
              cin.setCellValueFactory(new PropertyValueFactory<>("cin"));
              table.setItems(list);
             

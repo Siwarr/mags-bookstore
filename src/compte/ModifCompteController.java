@@ -114,7 +114,7 @@ ServiceCompteClient sc = new ServiceCompteClient();
 			msg.setFrom(new InternetAddress(fromEmail));
 			msg.addRecipient(Message.RecipientType.TO, new InternetAddress(toEmail));
 			msg.setSubject(" modification de compte ");
-                        msg.setText("modification de compte"+mail.getText());
+                        msg.setText("Bonjour "+nom.getText()+" " +prenom.getText()+" votre compte est modifier: votre e-mail: "+mail.getText()+"Votre mot de passe"+pwd.getText() );
 			Transport.send(msg);
 			
                         
