@@ -35,25 +35,7 @@
          <left>
             <VBox prefHeight="444.0" prefWidth="149.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#loadAddOuvrage" prefHeight="96.0" prefWidth="149.0" text="Ajouter Ouvrage">
-                     <graphic>
-                        <ImageView fitHeight="46.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@icons/Play_Books_30007.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#loadAddMember" prefHeight="91.0" prefWidth="148.0" text="Ajouter membre">
-                     <graphic>
-                        <ImageView fitHeight="46.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@icons/user_account_person_avatar_icon_131248.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button contentDisplay="TOP" layoutX="10.0" layoutY="79.0" mnemonicParsing="false" onAction="#loadOuvrageTable" prefHeight="91.0" prefWidth="149.0" text="Voir Ouvrage">
+                  <Button contentDisplay="TOP" layoutX="10.0" layoutY="79.0" mnemonicParsing="false" onAction="#loadOuvrageTable" prefHeight="118.0" prefWidth="150.0" text="Voir Ouvrage">
                      <graphic>
                         <ImageView fitHeight="46.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -62,20 +44,11 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button contentDisplay="TOP" layoutX="10.0" layoutY="148.0" mnemonicParsing="false" onAction="#loadMemberTable" prefHeight="92.0" prefWidth="149.0" text="Voir membres">
+                  <Button contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#loadEmpruntTable" prefHeight="118.0" prefWidth="150.0" text="Voir mes emprunts">
                      <graphic>
                         <ImageView fitHeight="46.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@icons/gnomebooks_104348.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button contentDisplay="TOP" layoutX="10.0" layoutY="265.0" mnemonicParsing="false" onAction="#loadEmpruntTable" prefHeight="100.0" prefWidth="149.0" text="Voir Emprunts">
-                     <graphic>
-                        <ImageView fitHeight="46.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@icons/gnomebooks_104348.png" />
+                              <Image url="@icons/Play_Books_30007.png" />
                            </image>
                         </ImageView>
                      </graphic>

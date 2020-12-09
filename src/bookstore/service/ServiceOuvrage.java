@@ -11,6 +11,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import bookstore.database.Myconnection;
+import bookstore.entites.Client;
+import bookstore.entites.Emprunt;
 import bookstore.entites.Ouvrage;
 import bookstore.interfaces.InterfaceOuvrage;
 
@@ -22,7 +24,10 @@ public class ServiceOuvrage implements InterfaceOuvrage {
     Myconnection cnx;
     int nbOuvrages=0;
     List<Ouvrage>ouvrages=new ArrayList<>();
+    List<Client>clients=new ArrayList<>();
+    List<Emprunt>emprunts=new ArrayList<>();
     
+
 	public List<Ouvrage> getOuvrages() {
 		return ouvrages;
 	}
@@ -49,7 +54,23 @@ public class ServiceOuvrage implements InterfaceOuvrage {
             ps.executeUpdate();
             nbOuvrages++;
         } catch (SQLException ex) {
-            System.err.println("erreur");
+            System.err.println("erreur insertion");
+        }
+    }
+    
+    public void ajouterClient(Client c) {
+        try {
+            // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            String req= "insert into client (id,name,email,tel,pwd) values (?,?,?,?,?)";
+            PreparedStatement ps = cnx.getConnection().prepareStatement(req);
+            ps.setString(1, c.getId());
+            ps.setString(2, c.getName());
+            ps.setString(3, c.getEmail());
+            ps.setString(4, c.getTel());
+            ps.setString(5, c.getPwd());
+            ps.executeUpdate();
+        } catch (SQLException ex) {
+            System.err.println("erreur insertion");
         }
     }
     
@@ -89,7 +110,7 @@ public class ServiceOuvrage implements InterfaceOuvrage {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         try {
 		String req="delete from ouvrage where name=?";
-                PreparedStatement ps = cnx.getConnection().prepareStatement(req);
+        PreparedStatement ps = cnx.getConnection().prepareStatement(req);
 		ps.setString(1, o.getName());
 		ps.executeUpdate();
 	} catch (Exception e) {
@@ -179,9 +200,10 @@ public class ServiceOuvrage implements InterfaceOuvrage {
     }*/
 
     @Override
-    public void SearchOuvrage(String name) {
+    public boolean SearchOuvrage(String name) {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         String req1= "select * from ouvrage where name= "+"'"+name+"'";
+        Boolean flag=false;
         try {
             //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
             
@@ -190,10 +212,85 @@ public class ServiceOuvrage implements InterfaceOuvrage {
             while(rs.next())
             {
                 System.out.println("Succes de Recherche :\n id: "+rs.getInt("id")+" author: "+rs.getString("author")+" name: "+rs.getString("name")+" price: "+rs.getFloat("price")+" edition: "+rs.getString("edition")+" isAvail: "+rs.getBoolean("isAvail")+" quantite: "+rs.getInt("quantite")+" description: "+rs.getString("description"));
+                flag=true;
+                //return flag;
             }
         } catch (SQLException ex) {
             System.err.println("erreur de recherche");
         }
-        
+        return flag;        
+    }
+    
+    public List<Client> afficherClients() {
+    	
+        try {
+            //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            String req1= "select * from client ";
+            Statement s= cnx.getConnection().createStatement();
+            ResultSet rs = s.executeQuery(req1);
+            while(rs.next())
+            {
+            	Client c=new Client();
+            	c.setId(rs.getString("id"));
+            	c.setName(rs.getString("name"));
+            	c.setTel(rs.getString("tel"));
+            	c.setEmail(rs.getString("email"));
+            	
+                clients.add(c);
+            }
+        } catch (SQLException ex) {
+            System.err.println("erreur affichage");
+            System.out.println(ex.getMessage());
+        }
+        return clients;
+    }
+    
+    public List<Emprunt> afficherEmprunt() {
+        try {
+            //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            String req1= "select * from emprunt";
+            Statement s= cnx.getConnection().createStatement();
+            ResultSet rs = s.executeQuery(req1);
+            while(rs.next())
+            {
+            	Emprunt e=new Emprunt();
+            	e.setBookName(rs.getString("bookName"));
+            	e.setMemberName(rs.getString("memberName"));
+            	e.setIssueTime(rs.getDate("issueTime"));
+            	e.setRenew_count((rs.getInt("renew_count")));
+            	
+                emprunts.add(e);
+            }
+        } catch (SQLException ex) {
+            System.err.println("erreur affichage");
+            System.out.println(ex.getMessage());
+        }
+        return emprunts;
+    }
+    public List<Emprunt> afficherMesEmprunt(Client c) {
+    	List<Emprunt>empruntsClient=new ArrayList<>();
+
+        try {
+            //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            String req1= "select * from emprunt "+"where (memberName)=(?) ";
+            Statement s= cnx.getConnection().createStatement();
+            PreparedStatement ps = cnx.getConnection().prepareStatement(req1);
+            ps.setString(1,c.getName());
+            ResultSet rs = ps.executeQuery();
+            while(rs.next())
+            {
+            	Emprunt e=new Emprunt();
+            	e.setBookName(rs.getString("bookName"));
+            	e.setMemberName(rs.getString("memberName"));
+            	e.setIssueTime(rs.getDate("issueTime"));
+            	e.setRenew_count((rs.getInt("renew_count")));
+            	
+            	empruntsClient.add(e);
+            }
+        } catch (SQLException ex) {
+            System.err.println("erreur affichage");
+            System.out.println(ex.getMessage());
+        }
+        return empruntsClient;
     }
 }

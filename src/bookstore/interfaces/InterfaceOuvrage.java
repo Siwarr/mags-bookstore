@@ -13,7 +13,7 @@ public interface InterfaceOuvrage {
     public void ajouterOuvrage(Ouvrage o);
     public void supprimerOuvrage(Ouvrage o);
     public List<Ouvrage> afficher();
-    public void SearchOuvrage(String name);
+    public boolean SearchOuvrage(String name);
     public void modifierOuvrage(Ouvrage p,Ouvrage v);
     //public void detailOuvrage(int id);
     //public List<Ouvrage> ouvrageData();

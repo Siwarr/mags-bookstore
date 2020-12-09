@@ -1,75 +1,67 @@
 package bookstore.entites;
 
 public class Admin {
-	private int id;
-    private String login;
-    private String mdp;
-    private String mail;
-    private String nom;
-    private String prenom;
+	private String id;
+    private String name;
+    private String tel;
+    private String email;
+    private String pwd;
 
     public Admin() {
     }
 
-    public Admin(int id, String login, String mdp, String mail, String nom, String prenom) {
-        this.id = id;
-        this.login = login;
-        this.mdp = mdp;
-        this.mail = mail;
-        this.nom = nom;
-        this.prenom = prenom;
-    }
+	public String getId() {
+		return id;
+	}
 
-    public int getId() {
-        return id;
-    }
+	public void setId(String id) {
+		this.id = id;
+	}
 
-    public void setId(int id) {
-        this.id = id;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public String getLogin() {
-        return login;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public void setLogin(String login) {
-        this.login = login;
-    }
+	public String getTel() {
+		return tel;
+	}
 
-    public String getMdp() {
-        return mdp;
-    }
+	public void setTel(String tel) {
+		this.tel = tel;
+	}
 
-    public void setMdp(String mdp) {
-        this.mdp = mdp;
-    }
+	public String getEmail() {
+		return email;
+	}
 
-    public String getMail() {
-        return mail;
-    }
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-    public void setMail(String mail) {
-        this.mail = mail;
-    }
+	public String getPwd() {
+		return pwd;
+	}
 
-    public String getNom() {
-        return nom;
-    }
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
+	}
 
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
+	public Admin(String id, String name, String tel, String email, String pwd, String prenom) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.tel = tel;
+		this.email = email;
+		this.pwd = pwd;
+	}
 
-    public String getPrenom() {
-        return prenom;
-    }
-
-    public void setPrenom(String prenom) {
-        this.prenom = prenom;
-    }
-
-    @Override
-    public String toString() {
-        return "Admin{" + "id=" + id + ", login=" + login + ", mdp=" + mdp + ", mail=" + mail + ", nom=" + nom + ", prenom=" + prenom + '}';
-    }
+	@Override
+	public String toString() {
+		return "Admin [id=" + id + ", name=" + name + ", tel=" + tel + ", email=" + email + ", pwd=" + pwd
+				+ "]";
+	}
 }

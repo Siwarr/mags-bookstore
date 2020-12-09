@@ -1,4 +1,4 @@
-package BookstoreUiListOuvrages;
+package BookstoreUiListClients;
 
 import java.net.URL;
 import java.sql.PreparedStatement;

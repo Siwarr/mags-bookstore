@@ -14,7 +14,7 @@ public class Myconnection {
     private Connection connexion;
     private static Myconnection instance;
     
-    private Myconnection()
+    public Myconnection()
     {
         try {
             connexion=DriverManager.getConnection(url, login, pwd);

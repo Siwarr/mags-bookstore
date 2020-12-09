@@ -89,13 +89,6 @@ public class BookstoreloginController implements Initializable{
         Client client=log.seConnecter(username.getText(),pwd.getText());
         Admin admin=log.seConnecterAdmin(username.getText(),pwd.getText());
         if(client!=null){
-            /*Alert alert=new Alert(Alert.AlertType.INFORMATION);
-            alert.setHeaderText(null);
-            alert.setContentText("Successful login");
-            alert.show();
-            ClientAuthentifie cl=ClientAuthentifie.getInstance();
-            cl.setClient(client);
-            */
             AuthClt cl=AuthClt.getInstance();
             cl.setClient(client);
  

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="rootPane" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="listEmprunts.list_empruntController">
+	<children>
+		<TableView fx:id="tableView" prefHeight="500.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<columns>
+				<TableColumn fx:id="bookCol" prefWidth="75.0" text="Ouvrage" />
+				<TableColumn fx:id="clientCol" prefWidth="75.0" text="Client" />
+				<TableColumn fx:id="dateCol" prefWidth="75.0" text="Date Emprunt" />
+				<TableColumn fx:id="renewCol" prefWidth="75.0" text="Nombre de renouvellement" />
+			</columns>
+			<columnResizePolicy>
+				<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+			</columnResizePolicy>
+			<contextMenu>
+				<ContextMenu>
+					<items>
+						<MenuItem mnemonicParsing="false" onAction="#handleOuvDeleteOption" text="Delete" />
+					</items>
+				</ContextMenu>
+			</contextMenu>
+		</TableView>
+	</children>
+</AnchorPane>

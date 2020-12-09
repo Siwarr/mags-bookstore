@@ -59,6 +59,8 @@ public class BookstoreAddController {
 			return;
 		}
 		so.ajouterOuvrage(o1);
+		Stage stage=(Stage) rootPane.getScene().getWindow();
+		stage.close();
 	}
 
 	// Event Listener on Button[#l].onAction

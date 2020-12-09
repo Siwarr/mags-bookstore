@@ -21,7 +21,7 @@ import bookstore.service.ServiceLogin_Register;
 import bookstore_v1.bookstore_v1;
 import javafx.event.ActionEvent;
 
-public class RegisterController implements Initializable {
+public class OldLoginController implements Initializable {
 
     @FXML
     private TextField username;
@@ -59,10 +59,10 @@ public class RegisterController implements Initializable {
   			return;
         }
         else{
-        client.setLogin(username.getText());
+        /*client.setLogin(username.getText());
         client.setNom(txt_lastname.getText());
         client.setMail(mail.getText());
-        client.setMdp(pwd.getText());
+        client.setMdp(pwd.getText());*/
         rg.registerClient(client);
         Client c2=rg.seConnecter(username.getText(),pwd.getText());
         if(c2!=null){

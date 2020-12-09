@@ -1,6 +1,7 @@
 package guiMain;
 import BookstoreUiListOuvrages.list_ouvragesController;
 import bookstore.service.ServiceOuvrage;
+import bookstoreuiregister.loginController;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
@@ -25,8 +26,8 @@ public class MainLoader extends Application {
 		    }*/
 			try {
 		        FXMLLoader loader = new FXMLLoader();
-		        loader.setController(new mainController());
-		        loader.setLocation(getClass().getResource("main.fxml"));
+		        loader.setController(new loginController());
+		        loader.setLocation(getClass().getResource("/bookstoreuiregister/login.fxml"));
 		        root = loader.load();
 		        Scene scene = new Scene(root);
 		        primaryStage.setScene(scene);
