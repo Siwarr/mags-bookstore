@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" onMouseClicked="#savebd" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="compte.ModifCompteController">
+   <children>
+      <TextField fx:id="prenom" layoutX="103.0" layoutY="112.0" />
+      <TextField fx:id="nom" layoutX="103.0" layoutY="166.0" />
+      <TextField fx:id="pwd" layoutX="103.0" layoutY="224.0" />
+      <TextField fx:id="ville" layoutX="103.0" layoutY="284.0" />
+      <Text layoutX="22.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Interface de modification " wrappingWidth="161.33670043945312" />
+      <Text layoutX="25.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prenom" wrappingWidth="48.52618408203125" />
+      <Text layoutX="29.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom" wrappingWidth="40.0" />
+      <Text layoutX="22.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mots de Passe" />
+      <Text layoutX="25.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ville" wrappingWidth="48.52618408203125" />
+      <Text layoutX="146.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Votre Cin" />
+      <TextField fx:id="cin" layoutX="226.0" layoutY="60.0" />
+      <TextField fx:id="mail" layoutX="327.0" layoutY="112.0" />
+      <Button layoutX="376.0" layoutY="342.0" mnemonicParsing="false" onMouseClicked="#savemodif" text="save" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="660.0" prefWidth="824.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="compte.FXMLDocumentController">
+    <children>
+      <Text layoutX="5.0" layoutY="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mon Compte" wrappingWidth="739.5829570293427">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+        <Button fx:id="button" layoutX="717.0" layoutY="614.0" onAction="#supprimer" text="désabonner" />
+      <TabPane layoutX="5.0" layoutY="53.0" prefHeight="554.0" prefWidth="809.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="consulter mon compte">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="table" layoutX="23.0" layoutY="42.0" prefHeight="91.0" prefWidth="762.0">
+                          <columns>
+                            <TableColumn fx:id="nom" prefWidth="75.0" text="Nom" />
+                            <TableColumn fx:id="pre" prefWidth="75.0" text="Prénom" />
+                              <TableColumn fx:id="mail" prefWidth="75.0" text="E-mail" />
+                              <TableColumn fx:id="num" prefWidth="125.60003662109375" text="numéro de télephone " />
+                              <TableColumn fx:id="ville" prefWidth="60.79998779296875" text="ville" />
+                              <TableColumn fx:id="datee" prefWidth="116.0" text="date d'inscription" />
+                              <TableColumn fx:id="cin" prefWidth="75.0" text="Cin" />
+                          </columns>
+                           <contextMenu>
+                              <ContextMenu>
+                                <items>
+                                  <MenuItem mnemonicParsing="false" onAction="#modifier" text="modifier" />
+                                </items>
+                              </ContextMenu>
+                           </contextMenu>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Modifier mon compte">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="36.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Que voulez vous changer ? " wrappingWidth="213.18308448791504" />
+                        <TextArea layoutX="36.0" layoutY="129.0" prefHeight="82.0" prefWidth="285.0" text="la nouvelle valeur que vous voulez ajouter " />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+    </children>
+</AnchorPane>

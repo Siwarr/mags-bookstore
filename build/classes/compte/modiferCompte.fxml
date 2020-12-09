@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="compte.ModiferCompteController">
+   <children>
+      <TextField fx:id="nom" layoutX="71.0" layoutY="123.0" />
+      <TextField fx:id="prenom" layoutX="71.0" layoutY="161.0" />
+      <TextField fx:id="ville" layoutX="71.0" layoutY="200.0" />
+      <TextField fx:id="email" layoutX="71.0" layoutY="236.0" />
+      <TextField fx:id="mdp" layoutX="71.0" layoutY="272.0" />
+      <Button fx:id="save" layoutX="417.0" layoutY="309.0" mnemonicParsing="false" onMouseClicked="#savebd" text="save" />
+   </children>
+</AnchorPane>
