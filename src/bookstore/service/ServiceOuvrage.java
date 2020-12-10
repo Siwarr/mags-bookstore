@@ -15,6 +15,10 @@ import bookstore.entites.Client;
 import bookstore.entites.Emprunt;
 import bookstore.entites.Ouvrage;
 import bookstore.interfaces.InterfaceOuvrage;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.collections.ObservableListBase;
+import javafx.scene.chart.PieChart;
 
 /**
  *
@@ -25,7 +29,7 @@ public class ServiceOuvrage implements InterfaceOuvrage {
     int nbOuvrages=0;
     List<Ouvrage>ouvrages=new ArrayList<>();
     List<Client>clients=new ArrayList<>();
-    List<Emprunt>emprunts=new ArrayList<>();
+    
     
 
 	public List<Ouvrage> getOuvrages() {
@@ -221,6 +225,59 @@ public class ServiceOuvrage implements InterfaceOuvrage {
         return flag;        
     }
     
+    public ObservableList<PieChart.Data> getBookGraphStat(){
+    	ObservableList<PieChart.Data> data = FXCollections.observableArrayList();
+    	try {
+    	String qu1="Select count(*) from ouvrage";
+    	String qu2="Select count(*) from emprunt";
+	    	Statement s= cnx.getConnection().createStatement();
+			ResultSet rs = s.executeQuery(qu1);
+			if(rs.next())
+	        {
+	        	int count= rs.getInt(1);
+	        	data.add(new PieChart.Data("Total ouvrage ("+ count+ ")",count));
+	        }
+			ResultSet rs1 = s.executeQuery(qu2);
+			if(rs1.next())
+	        {
+	        	int count= rs1.getInt(1);
+	        	data.add(new PieChart.Data("Total emprunts ("+ count+ ")",count));
+	        }
+			
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	return data;
+    }
+    public ObservableList<PieChart.Data> getMembreGraphStat(){
+    	ObservableList<PieChart.Data> data = FXCollections.observableArrayList();
+    	try {
+    	String qu1="Select count(*) from client";
+    	String qu2="Select count(DISTINCT memberName) from emprunt";
+	    	Statement s= cnx.getConnection().createStatement();
+			ResultSet rs = s.executeQuery(qu1);
+			if(rs.next())
+	        {
+	        	int count= rs.getInt(1);
+	        	data.add(new PieChart.Data("Total clients ("+ count+ ")",count));
+	        }
+			ResultSet rs1 = s.executeQuery(qu2);
+			if(rs1.next())
+	        {
+	        	int count= rs1.getInt(1);
+	        	data.add(new PieChart.Data("Total clients avec emprunts ("+ count+ ")",count));
+	        }
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	return data;
+    }
+    
+    
+    
     public List<Client> afficherClients() {
     	
         try {
@@ -245,10 +302,12 @@ public class ServiceOuvrage implements InterfaceOuvrage {
         return clients;
     }
     
+    
     public List<Emprunt> afficherEmprunt() {
+    	List<Emprunt> l=new ArrayList<>();
         try {
             //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            String req1= "select * from emprunt";
+            String req1= "select * from emprunt ";
             Statement s= cnx.getConnection().createStatement();
             ResultSet rs = s.executeQuery(req1);
             while(rs.next())
@@ -259,17 +318,17 @@ public class ServiceOuvrage implements InterfaceOuvrage {
             	e.setIssueTime(rs.getDate("issueTime"));
             	e.setRenew_count((rs.getInt("renew_count")));
             	
-                emprunts.add(e);
+                l.add(e);
             }
         } catch (SQLException ex) {
             System.err.println("erreur affichage");
             System.out.println(ex.getMessage());
         }
-        return emprunts;
+        return l;
     }
     public List<Emprunt> afficherMesEmprunt(Client c) {
-    	List<Emprunt>empruntsClient=new ArrayList<>();
-
+    	List<Emprunt>list=new ArrayList<>();
+    	System.out.println("client : "+c);
         try {
             //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
             String req1= "select * from emprunt "+"where (memberName)=(?) ";
@@ -284,13 +343,12 @@ public class ServiceOuvrage implements InterfaceOuvrage {
             	e.setMemberName(rs.getString("memberName"));
             	e.setIssueTime(rs.getDate("issueTime"));
             	e.setRenew_count((rs.getInt("renew_count")));
-            	
-            	empruntsClient.add(e);
+            	list.add(e);
             }
         } catch (SQLException ex) {
             System.err.println("erreur affichage");
             System.out.println(ex.getMessage());
         }
-        return empruntsClient;
+        return list;
     }
 }

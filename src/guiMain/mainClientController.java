@@ -29,7 +29,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-public class mainController implements Initializable {
+public class mainClientController implements Initializable {
 
 	@FXML
 	private HBox book_info;
@@ -59,34 +59,19 @@ public class mainController implements Initializable {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub	
-		//JFXDepthManager.setDepth(book_info,1);
 		
 	}
 	
 	@FXML
-	private void loadAddMember(ActionEvent event) {
-		loadWindow("/bookstoreUiAddMembre/membre_add.fxml","Add new Member");
-	}
-	@FXML
-	private void loadAddOuvrage (ActionEvent event) {
-		loadWindow("/bookstoreUiAddOuvrage/BookstoreAddOuv.fxml","Add new Ouvrage");
-	}
-	@FXML
 	private void loadOuvrageTable(ActionEvent event) {
 		loadWindow("/BookstoreUiListOuvrages/list_ouvrages.fxml","Liste Ouvrages");
 	}
-	@FXML
-	private void loadMemberTable(ActionEvent event) {
-		loadWindow("/BookstoreUiListClients/list_client.fxml","Liste Clients");
-	}
+
 	@FXML 
 	private void loadEmpruntTable(ActionEvent event) {
-		loadWindow("/listEmprunts/list_emprunt.fxml","Liste Emprunts");
+		loadWindow("/listEmprunts/list_empruntClient.fxml","Liste Emprunts");
 	}
-	@FXML 
-	private void loadStat(ActionEvent event) {
-		loadWindow("/empruntStat/empruntstat.fxml","Statistiques Emprunts");
-	}
+	
 	void loadWindow(String loc,String title) {
 		try {
 			Parent parent = FXMLLoader.load(getClass().getResource(loc));
@@ -396,7 +381,5 @@ public class mainController implements Initializable {
 			alert4.setContentText("Operation de renouvellement annulée");
 			alert4.showAndWait();
 		}
-		
 	}
-	
 }
