@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="469.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="slidenavigation.ChercherCategorieController">
+   <children>
+      <Text layoutX="74.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="id" />
+      <Button layoutX="163.0" layoutY="159.0" mnemonicParsing="false" onAction="#findCategorieById" text="chercher categorie" />
+      <TextField fx:id="idlabel" layoutX="141.0" layoutY="85.0" />
+      <TextArea fx:id="areaaffiche" layoutX="15.0" layoutY="234.0" prefHeight="91.0" prefWidth="440.0" />
+   </children>
+</AnchorPane>

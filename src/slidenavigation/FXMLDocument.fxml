@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="557.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="slidenavigation.FXMLDocumentController">
+   <left>
+      <VBox prefHeight="552.0" prefWidth="153.0" style="-fx-background-color: #4169E1;" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onMouseClicked="#home" prefHeight="73.0" prefWidth="153.0" style="-fx-background-color: tranparant; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Home" textFill="#f5eeee">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#AjouterCategorie" prefHeight="89.0" prefWidth="153.0" style="-fx-background-color: tranparant; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Ajouter Categorie" textFill="#f5eeee">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="86.0" mnemonicParsing="false" onMouseClicked="#SupprimerCategorie" prefHeight="91.0" prefWidth="153.0" style="-fx-background-color: tranparant; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Supprimer Categorie" textFill="#f5eeee">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="162.0" mnemonicParsing="false" onMouseClicked="#ModifierCategorie" prefHeight="86.0" prefWidth="153.0" style="-fx-background-color: tranparant; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Modifier Categorie" textFill="#f5eeee">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="238.0" mnemonicParsing="false" onMouseClicked="#AfficherCategorie" prefHeight="88.0" prefWidth="153.0" style="-fx-background-color: tranparant; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Afficher Categorie" textFill="#f5eeee">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="314.0" mnemonicParsing="false" onMouseClicked="#ChercherCategorie" prefHeight="100.0" prefWidth="153.0" style="-fx-background-color: tranparant; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Chercher Categorie" textFill="#f5eeee">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane fx:id="ap" prefHeight="660.0" prefWidth="624.0" style="-fx-background-color: #87CEFA;" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="177.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Home">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="469.0" style="-fx-background-color: #87CEFA;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="slidenavigation.AjouterCategorieController">
+   <children>
+      <Text layoutX="104.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lib" wrappingWidth="51.71484375">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Button layoutX="130.0" layoutY="288.0" mnemonicParsing="false" onAction="#CreeCategorie" prefHeight="25.0" prefWidth="185.0" text="Ajouter Categorie" />
+      <Text layoutX="103.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <TextField fx:id="tfLib" layoutX="198.0" layoutY="143.0" prefHeight="17.0" prefWidth="185.0" />
+      <TextField fx:id="tfDescription" layoutX="208.0" layoutY="212.0" prefHeight="25.0" prefWidth="192.0" />
+   </children>
+</AnchorPane>
