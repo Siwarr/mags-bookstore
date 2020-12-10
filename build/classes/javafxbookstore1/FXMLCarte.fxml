@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="261.0" prefWidth="549.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="javafxbookstore1.FXMLCarteController">
+   <children>
+      <TextField fx:id="tfNumCarte" layoutX="43.0" layoutY="92.0" prefHeight="26.0" prefWidth="236.0" />
+      <Label layoutX="43.0" layoutY="53.0" prefHeight="26.0" prefWidth="113.0" text="Numéro du carte:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfMonth" layoutX="292.0" layoutY="92.0" prefHeight="26.0" prefWidth="50.0" />
+      <Label layoutX="292.0" layoutY="57.0" text="Month:" />
+      <TextField fx:id="tfYear" layoutX="359.0" layoutY="92.0" prefHeight="26.0" prefWidth="74.0" />
+      <Label layoutX="359.0" layoutY="57.0" text="Year:" />
+      <TextField fx:id="tfCvc" layoutX="448.0" layoutY="92.0" prefHeight="26.0" prefWidth="58.0" />
+      <Label layoutX="448.0" layoutY="57.0" text="CVC:" />
+      <Button layoutX="179.0" layoutY="166.0" mnemonicParsing="false" onAction="#ajoutCarte" prefHeight="35.0" prefWidth="190.0" text="Ajouter une carte" />
+   </children>
+</AnchorPane>

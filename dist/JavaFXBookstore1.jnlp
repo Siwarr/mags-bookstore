@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="JavaFXBookstore1.jnlp">
+  <information>
+    <title>JavaFXBookstore1</title>
+    <vendor>aymen</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="JavaFXBookstore1.jar" size="18944" download="eager" />
+    <jar href="lib\gson-2.8.2.jar" size="232932" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.15-bin.jar" size="785998" download="eager" />
+    <jar href="lib\stripe-java-20.31.0.jar" size="3672729" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="javafxbookstore1.JavaFXBookstore1"  name="JavaFXBookstore1" />
+  <update check="always"/>
+</jnlp>

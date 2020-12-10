@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="660.0" prefWidth="824.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="javafxbookstore1.FXMLBasketController">
+   <children>
+      <TableView fx:id="tvBasket" layoutX="82.0" layoutY="81.0" prefHeight="381.0" prefWidth="631.0">
+        <columns>
+          <TableColumn fx:id="tcNom" prefWidth="157.60003662109375" text="Nom Ouvrage" />
+          <TableColumn fx:id="tcPrix" prefWidth="157.5999755859375" text="Prix Ouvrage" />
+            <TableColumn fx:id="tcQanti" prefWidth="148.79998779296875" text="Quantite " />
+            <TableColumn fx:id="tcPrixTotal" prefWidth="167.199951171875" text="Prix Commande" />
+        </columns>
+      </TableView>
+      <Button layoutX="119.0" layoutY="498.0" mnemonicParsing="false" onAction="#updateOuvrage" prefHeight="39.0" prefWidth="74.0" text="Modifier" />
+      <Button layoutX="208.0" layoutY="498.0" mnemonicParsing="false" onAction="#SupprimOuvrage" prefHeight="39.0" prefWidth="74.0" text="Supprimer" />
+      <Button layoutX="637.0" layoutY="562.0" mnemonicParsing="false" onAction="#confirmBasket" prefHeight="58.0" prefWidth="143.0" text="Confirmer Panier" textFill="#c70f0f">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="filterfield" layoutX="83.0" layoutY="36.0" prefHeight="26.0" prefWidth="220.0" />
+      <TextField fx:id="tfGetTotal" editable="false" layoutX="639.0" layoutY="524.0" prefHeight="26.0" prefWidth="143.0" />
+   </children>
+</AnchorPane>
