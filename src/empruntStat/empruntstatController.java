@@ -3,6 +3,7 @@ package empruntStat;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import bookstore.service.ServiceClient;
 import bookstore.service.ServiceOuvrage;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -27,8 +28,9 @@ public class empruntstatController implements Initializable{
 	private void initGraphs() {
 		// TODO Auto-generated method stub
 		ServiceOuvrage s=new ServiceOuvrage();
+		ServiceClient so=new ServiceClient();
 		bookChart=new PieChart(s.getBookGraphStat());
-		clientChart=new PieChart(s.getMembreGraphStat());
+		clientChart=new PieChart(so.getMembreGraphStat());
 		bookInfoContainer.getChildren().add(bookChart);
 		clientInfoContainer.getChildren().add(clientChart);
 		

@@ -3,6 +3,7 @@ package BookstoreUiListClients;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import bookstore.service.ServiceClient;
 import bookstore.service.ServiceOuvrage;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -39,7 +40,7 @@ public class list_clientController implements Initializable {
 	}
 
 	private void loadData() {
-		ServiceOuvrage so = new ServiceOuvrage();
+		ServiceClient so = new ServiceClient();
 		tableView.getItems().setAll(so.afficherClients());
 	}
 

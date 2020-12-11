@@ -8,6 +8,7 @@ import java.util.ResourceBundle;
 
 import bookstore.entites.Client;
 import bookstore.service.AuthClt;
+import bookstore.service.ServiceEmprunt;
 import bookstore.service.ServiceOuvrage;
 import javafx.event.ActionEvent;
 
@@ -52,7 +53,7 @@ public class list_empruntClientController  implements Initializable{
 	}
 
 	private void loadData() {
-		ServiceOuvrage so = new ServiceOuvrage();
+		ServiceEmprunt so = new ServiceEmprunt();
 		AuthClt cl=AuthClt.getInstance();
 	    Client c=cl.getClient();
 	    System.out.println("client :"+c);
